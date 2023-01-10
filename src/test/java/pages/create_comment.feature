@@ -1,7 +1,7 @@
 Feature: Commenting on a highlight
 	Scenario: Create comment successful
 		Given url highlightsUrl
-		Given path '1/comments'
+		And path '1/comments'
 		And request { name: "Jhon Doe", email: "email@email.com", body: "Lorem ipsum" }
 		When method post
 		Then status 201
