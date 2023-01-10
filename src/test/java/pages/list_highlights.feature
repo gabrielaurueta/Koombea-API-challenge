@@ -15,7 +15,7 @@ Feature: List book highlights
 
 	Scenario: Finding a specific highlight
 		Given url highlightsUrl
-		Given path '2'
+		And path '2'
 		When method get
 		Then status 200
 		And match response == { id: 2, userId: '#notnull', title: '#notnull', body: '#notnull' }
